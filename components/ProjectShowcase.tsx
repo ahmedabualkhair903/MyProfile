@@ -75,7 +75,7 @@ const projects: Project[] = [
       "Tailwind CSS",
     ],
     href: "/projects/velora",
-    live: "https://velora-cyan-eight.vercel.app/",
+    live: "https://velora-git-main-ahmedabualkhair903s-projects.vercel.app/",
     github: "https://github.com/ahmedabualkhair903/VELORA",
     tint: "fuchsia",
   },

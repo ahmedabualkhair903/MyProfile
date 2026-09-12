@@ -174,7 +174,7 @@ const projects: Record<string, Project> = {
     ],
     role: "Frontend Development",
     status: "Completed",
-    live: "https://velora-cyan-eight.vercel.app/",
+    live: "https://velora-git-main-ahmedabualkhair903s-projects.vercel.app/",
     github: "https://github.com/ahmedabualkhair903/VELORA",
     tint: "fuchsia",
   },
