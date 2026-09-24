@@ -101,6 +101,28 @@ const projects: Project[] = [
       "https://github.com/ahmedabualkhair903/My-Fiirst-Project",
     tint: "violet",
   },
+  {
+    number: "05",
+    title: "CLINIC SYSTEM",
+    category: "CLINIC MANAGEMENT",
+    description:
+      "A modern Arabic clinic management system built around real daily workflows, bringing reception, appointments, queue management, patients, doctors, staff, reports and operational data into one focused interface.",
+    year: "2026",
+    image: "/projects/clinic.png",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Responsive UI",
+      "Arabic RTL",
+    ],
+    href: "/projects/clinic",
+    live: "https://clinic-system-silk-seven.vercel.app/",
+    github:
+      "https://github.com/ahmedabualkhair903/clinic-system",
+    tint: "cyan",
+  },
 ];
 
 const tintStyles: Record<
@@ -287,7 +309,9 @@ function ProjectCard({
           aria-label={`View ${project.title} case study`}
         >
           {/* Ambient glow */}
-          <div className={`pointer-events-none absolute left-1/2 top-1/2 z-0 h-[55%] w-[55%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[100px] transition-all duration-700 ${tintStyles[project.tint].ambient} group-hover:h-[65%] group-hover:w-[65%] ${tintStyles[project.tint].ambientHover}`} />
+          <div
+            className={`pointer-events-none absolute left-1/2 top-1/2 z-0 h-[55%] w-[55%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[100px] transition-all duration-700 ${tintStyles[project.tint].ambient} group-hover:h-[65%] group-hover:w-[65%] ${tintStyles[project.tint].ambientHover}`}
+          />
 
           {/* Grid */}
           <div className="pointer-events-none absolute inset-0 z-10 opacity-[0.035] [background-image:linear-gradient(rgba(255,255,255,0.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.7)_1px,transparent_1px)] [background-size:60px_60px]" />
@@ -361,7 +385,9 @@ function ProjectCard({
           </motion.div>
 
           {/* Number */}
-          <span className={`absolute bottom-6 left-6 z-30 text-xs transition-colors duration-300 ${tintStyles[project.tint].number}`}>
+          <span
+            className={`absolute bottom-6 left-6 z-30 text-xs transition-colors duration-300 ${tintStyles[project.tint].number}`}
+          >
             {project.number}
           </span>
 
@@ -376,7 +402,9 @@ function ProjectCard({
           <div>
             {/* Meta */}
             <div className="flex items-center justify-between">
-              <span className={`text-[10px] uppercase tracking-[0.2em] ${tintStyles[project.tint].badge}`}>
+              <span
+                className={`text-[10px] uppercase tracking-[0.2em] ${tintStyles[project.tint].badge}`}
+              >
                 {project.category}
               </span>
 

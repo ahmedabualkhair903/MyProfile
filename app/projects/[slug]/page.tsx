@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -214,6 +213,42 @@ const projects: Record<string, Project> = {
     github: "https://github.com/ahmedabualkhair903/My-Fiirst-Project",
     tint: "violet",
   },
+
+  clinic: {
+    slug: "clinic",
+    number: "05",
+    title: "CLINIC SYSTEM",
+    category: "CLINIC MANAGEMENT",
+    year: "2026",
+    description:
+      "A modern Arabic clinic management system built around real daily workflows, bringing reception, appointments, queue management, patients, doctors, staff, reports and operational data into one focused interface.",
+    overview:
+      "Clinic System is a modern Arabic RTL clinic management experience designed around the actual flow of a medical center. The interface brings reception, appointments, queue management, patients, doctors, staff, reports and operational tools together in a clear and focused workspace.",
+    image: "/projects/clinic.png",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Responsive UI",
+      "Arabic RTL",
+    ],
+    features: [
+      "Arabic RTL medical interface",
+      "Clinic dashboard and daily overview",
+      "Appointments management",
+      "Reception workflow",
+      "Patient management",
+      "Queue management",
+      "Doctors and staff management",
+      "Reports, audit logs and operational tools",
+    ],
+    role: "Frontend Development",
+    status: "Completed",
+    live: "https://clinic-system-silk-seven.vercel.app/",
+    github: "https://github.com/ahmedabualkhair903/clinic-system",
+    tint: "cyan",
+  },
 };
 
 const defaultProjectOrder = [
@@ -221,6 +256,7 @@ const defaultProjectOrder = [
   "luxora",
   "velora",
   "nexastore",
+  "clinic",
 ];
 
 export default function ProjectCaseStudyPage() {
@@ -328,7 +364,9 @@ export default function ProjectCaseStudyPage() {
               delay: 0.1,
             }}
           >
-            <span className={`text-[10px] uppercase tracking-[0.25em] ${t.text}`}>
+            <span
+              className={`text-[10px] uppercase tracking-[0.25em] ${t.text}`}
+            >
               {project.number} — {project.category}
             </span>
 
@@ -359,7 +397,9 @@ export default function ProjectCaseStudyPage() {
                 </span>
 
                 <span className="mt-2 flex items-center gap-2 text-xs text-white/50">
-                  <span className={`h-1.5 w-1.5 rounded-full ${t.dot}`} />
+                  <span
+                    className={`h-1.5 w-1.5 rounded-full ${t.dot}`}
+                  />
                   {project.status}
                 </span>
               </div>
@@ -449,7 +489,9 @@ export default function ProjectCaseStudyPage() {
         >
           <div className="absolute inset-0 bg-gradient-to-br from-white/[0.035] via-transparent to-transparent" />
 
-          <div className={`pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full blur-[110px] ${t.glow}`} />
+          <div
+            className={`pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full blur-[110px] ${t.glow}`}
+          />
 
           {/* Browser bar */}
 
@@ -505,7 +547,9 @@ export default function ProjectCaseStudyPage() {
               duration: 0.8,
             }}
           >
-            <span className={`text-[9px] uppercase tracking-[0.22em] ${t.text}`}>
+            <span
+              className={`text-[9px] uppercase tracking-[0.22em] ${t.text}`}
+            >
               01 — Overview
             </span>
           </motion.div>
@@ -541,7 +585,9 @@ export default function ProjectCaseStudyPage() {
       <section className="mx-auto max-w-7xl px-6 pb-32 md:px-10 md:pb-44">
         <div className="grid gap-14 border-t border-white/10 pt-10 lg:grid-cols-[0.55fr_1.45fr]">
           <div>
-            <span className={`text-[9px] uppercase tracking-[0.22em] ${t.text}`}>
+            <span
+              className={`text-[9px] uppercase tracking-[0.22em] ${t.text}`}
+            >
               02 — Features
             </span>
           </div>
@@ -568,7 +614,9 @@ export default function ProjectCaseStudyPage() {
                 }}
                 className="group relative min-h-[180px] bg-black p-7 transition-colors duration-500 hover:bg-white/[0.025] md:p-9"
               >
-                <span className={`text-[9px] ${t.text} opacity-70`}>
+                <span
+                  className={`text-[9px] ${t.text} opacity-70`}
+                >
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
@@ -593,7 +641,9 @@ export default function ProjectCaseStudyPage() {
         <div className="mx-auto max-w-7xl px-6 py-32 md:px-10 md:py-40">
           <div className="grid gap-14 lg:grid-cols-[0.55fr_1.45fr]">
             <div>
-              <span className={`text-[9px] uppercase tracking-[0.22em] ${t.text}`}>
+              <span
+                className={`text-[9px] uppercase tracking-[0.22em] ${t.text}`}
+              >
                 03 — Technology
               </span>
             </div>
