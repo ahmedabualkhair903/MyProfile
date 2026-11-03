@@ -187,7 +187,6 @@ export default function ContactSection() {
                   src="/profile.png"
                   alt="Ahmed Abu Al-Khair profile photo"
                   fill
-                  priority
                   sizes="(max-width: 640px) 112px, 128px"
                   style={{
                     transformOrigin: "50% 26%",

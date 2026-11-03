@@ -28,7 +28,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-black">
+    <footer className="relative overflow-hidden border-t border-white/10">
       {/* Ambient background */}
 
       <div className="pointer-events-none absolute -bottom-48 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-violet-accent/[0.05] blur-[140px]" />

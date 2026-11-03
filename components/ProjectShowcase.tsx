@@ -368,7 +368,6 @@ function ProjectCard({
                   fill
                   sizes="(max-width: 1024px) 90vw, 60vw"
                   className="object-cover object-top"
-                  priority={index === 0}
                 />
               </motion.div>
 

@@ -1,9 +1,7 @@
-
 "use client";
 
 import Link from "next/link";
-import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
-import { useEffect } from "react";
+import { motion } from "motion/react";
 
 import Magnetic from "@/components/Magnetic";
 
@@ -15,48 +13,12 @@ const technologies = [
 ];
 
 export default function Hero() {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const smoothX = useSpring(mouseX, {
-    stiffness: 80,
-    damping: 20,
-    mass: 0.5,
-  });
-
-  const smoothY = useSpring(mouseY, {
-    stiffness: 80,
-    damping: 20,
-    mass: 0.5,
-  });
-
-  const visualX = useTransform(smoothX, [-1, 1], [-18, 18]);
-  const visualY = useTransform(smoothY, [-1, 1], [-14, 14]);
-
-  const orbitX = useTransform(smoothX, [-1, 1], [-8, 8]);
-  const orbitY = useTransform(smoothY, [-1, 1], [-6, 6]);
-
-  useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      const x = event.clientX / window.innerWidth;
-      const y = event.clientY / window.innerHeight;
-
-      mouseX.set((x - 0.5) * 2);
-      mouseY.set((y - 0.5) * 2);
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [mouseX, mouseY]);
-
   return (
+
     <section
       id="home"
       aria-labelledby="hero-heading"
-      className="relative flex min-h-screen items-center overflow-hidden bg-black"
+      className="relative flex min-h-screen items-center overflow-hidden"
     >
       {/* =====================================================
           Ambient background
@@ -85,113 +47,7 @@ export default function Hero() {
 
       <div className="hero-radial-grid" />
 
-      {/* =====================================================
-          Interactive visual
-          ===================================================== */}
 
-      <div className="pointer-events-none absolute right-[-8%] top-1/2 hidden h-[680px] w-[680px] -translate-y-1/2 lg:block">
-        {/* Atmospheric glow */}
-
-        <motion.div
-          style={{
-            x: visualX,
-            y: visualY,
-          }}
-          className="absolute inset-0"
-        >
-          <div className="absolute left-1/2 top-1/2 h-[460px] w-[460px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-accent/[0.05] blur-[90px]" />
-        </motion.div>
-
-        {/* Orbit system */}
-
-        <motion.div
-          style={{
-            x: orbitX,
-            y: orbitY,
-          }}
-          className="absolute inset-0 flex items-center justify-center"
-        >
-          <div className="hero-orbit hero-orbit--one" />
-          <div className="hero-orbit hero-orbit--two" />
-          <div className="hero-orbit hero-orbit--three" />
-        </motion.div>
-
-        {/* Main core */}
-
-        <motion.div
-          style={{
-            x: visualX,
-            y: visualY,
-          }}
-          className="absolute inset-0 flex items-center justify-center"
-        >
-          <motion.div
-            animate={{
-              rotate: [0, 4, -4, 0],
-              scale: [1, 1.025, 1],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="relative flex items-center justify-center"
-          >
-            <div className="hero-core" />
-
-            {/* Core orbiting line */}
-
-            <motion.div
-              animate={{
-                rotate: 360,
-              }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="absolute h-[13rem] w-[13rem] rounded-full border border-white/[0.09]"
-            >
-              <span className="absolute left-1/2 top-[-3px] h-[6px] w-[6px] -translate-x-1/2 rounded-full bg-white/70 shadow-[0_0_15px_rgba(255,255,255,0.45)]" />
-            </motion.div>
-
-            {/* Second orbiting line */}
-
-            <motion.div
-              animate={{
-                rotate: -360,
-              }}
-              transition={{
-                duration: 14,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="absolute h-[17rem] w-[9rem] rotate-[35deg] rounded-[50%] border border-white/[0.07]"
-            >
-              <span className="absolute bottom-[-3px] left-1/2 h-[6px] w-[6px] -translate-x-1/2 rounded-full bg-white/45 shadow-[0_0_14px_rgba(255,255,255,0.3)]" />
-            </motion.div>
-          </motion.div>
-        </motion.div>
-
-        {/* =================================================
-            Particles
-            ================================================= */}
-
-        <span className="hero-particle hero-particle--one left-[18%] top-[30%]" />
-        <span className="hero-particle hero-particle--two right-[17%] top-[24%]" />
-        <span className="hero-particle hero-particle--three bottom-[27%] left-[22%]" />
-        <span className="hero-particle hero-particle--four bottom-[18%] right-[25%]" />
-
-        <span className="absolute left-[32%] top-[18%] h-1 w-1 rounded-full bg-white/30" />
-        <span className="absolute bottom-[30%] right-[14%] h-1.5 w-1.5 rounded-full bg-white/20" />
-        <span className="absolute left-[12%] top-[58%] h-1 w-1 rounded-full bg-white/20" />
-
-        {/* Scan line */}
-
-        <div className="absolute left-1/2 top-1/2 h-[300px] w-[1px] -translate-x-1/2 -translate-y-1/2 overflow-hidden">
-          <div className="hero-scan left-1/2 -translate-x-1/2 rotate-90" />
-        </div>
-      </div>
 
       {/* =====================================================
           Main content

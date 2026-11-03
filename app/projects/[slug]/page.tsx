@@ -293,7 +293,7 @@ export default function ProjectCaseStudyPage() {
   const t = tintStyles[project.tint];
 
   return (
-    <main className="min-h-screen overflow-hidden bg-black text-white">
+    <main className="min-h-screen overflow-hidden text-white">
       {/* =====================================================
           Background
           ===================================================== */}
@@ -516,7 +516,6 @@ export default function ProjectCaseStudyPage() {
               src={project.image}
               alt={`${project.title} project preview`}
               fill
-              priority
               sizes="100vw"
               className="object-cover object-top transition-transform duration-[1.5s] hover:scale-[1.015]"
             />

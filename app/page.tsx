@@ -1,6 +1,4 @@
 
-"use client";
-
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ProjectShowcase from "@/components/ProjectShowcase";
@@ -10,7 +8,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-black text-white">
+    <main className="min-h-screen overflow-x-hidden text-white">
       {/* Navigation */}
       <Navbar />
 

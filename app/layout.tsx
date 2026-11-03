@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 
 import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
+import ThreeHeroVortex from "@/components/ThreeHeroVortex";
 
 import "./globals.css";
 
@@ -119,9 +120,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-black">
       <body className={`${inter.variable} bg-black text-white`}>
+        {/* Fixed Background Vortex - Full screen and stays during scroll */}
+        <ThreeHeroVortex />
+        <div aria-hidden="true" className="vortex-scrim" />
+        
         <CustomCursor />
         <ScrollProgress />
-        {children}
+        
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );
