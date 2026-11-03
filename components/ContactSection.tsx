@@ -183,16 +183,16 @@ export default function ContactSection() {
               <div className="absolute -inset-1.5 rounded-full bg-gradient-to-br from-violet-600 via-violet-accent to-cyan-accent opacity-60 blur-[10px] transition-all duration-500 group-hover/avatar:opacity-90 group-hover/avatar:blur-[14px]" />
 
               <div className="relative h-full w-full overflow-hidden rounded-full border border-white/15 outline-none ring-2 ring-white/10 transition-all duration-500 group-hover/avatar:border-violet-accent/60 group-hover/avatar:ring-violet-accent/30">
-                <Image
-                  src="/profile.png"
-                  alt="Ahmed Abu Al-Khair profile photo"
-                  fill
-                  sizes="(max-width: 640px) 112px, 128px"
-                  style={{
-                    transformOrigin: "50% 26%",
-                  }}
-                  className="object-cover object-[50%_20%] scale-[1.25] transition-transform duration-700 group-hover/avatar:scale-[1.35]"
-                />
+         <Image
+  src="/profile.png"
+  alt="Ahmed Abu Al-Khair profile photo"
+  fill
+  sizes="(max-width: 640px) 112px, 128px"
+  style={{
+    transformOrigin: "50% 26%",
+  }}
+  className="object-cover object-center scale-100 transition-transform duration-700 group-hover/avatar:scale-110"
+/>
               </div>
             </motion.div>
 
